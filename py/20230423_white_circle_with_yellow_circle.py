@@ -17,9 +17,9 @@ def make_frame(t):
     cv2.circle(img, (x, y), r, (255, 255, 255), -1)
 
     # 小さな黄色い円を描画する
-    x_small = x + int(r/2) # 白い円の中心座標から半径の半分右にずらす
+    x_small = x + int(r * 1.5) # 白い円の中心座標から右にずらす
     r_small = int(r/4) # 白い円の半径の1/4にする
-    cv2.circle(img, (x_small, y), r_small, (0, 255, 255), -1)
+    cv2.circle(img, (x_small, y), r_small, (227, 199, 0), -1)
 
     return img
 

@@ -20,11 +20,11 @@ def make_frame(t):
     x2 = int(1920 * (1 - t / 10) + 150)
     y2 = 540
     r2 = int(50)
-    cv2.circle(img, (x2, y2), r2, (0, 255, 255), -1)
+    cv2.circle(img, (x2, y2), r2, (227, 199, 0), -1)
 
     return img
 
 
 # 動画ファイルを生成する
-clip = VideoClip(make_frame, duration=10)
+clip = VideoClip(make_frame, duration=20)
 clip.write_videofile("stop_motion.mp4", fps=5, codec="mpeg4")
